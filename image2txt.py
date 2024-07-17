@@ -4,8 +4,8 @@ from PIL import Image
 import base64
 
 # Path to the image in the directory of the current notepad
-image_path = 'Yield.PNG'
-img = Image.open(image_path)
+image_path = 'file1.PNG' #to change image path 
+img = Image.open(image_path) 
 
 #  Convert image to base64 format
 with open(image_path, "rb") as image_file:
@@ -13,7 +13,7 @@ with open(image_path, "rb") as image_file:
 
 # Make a request to Google Cloud Vision API
 api_key = 'example'
-url = f'test={api_key}'# <-- link api key based on account
+url = f'test={api_key}'# <-- link api key based on account on Google Cloud Platform
 
 headers = {'Content-Type': 'application/json'}
 data = {
@@ -38,14 +38,14 @@ result = response.json()
 text = result['responses'][0].get('fullTextAnnotation', {}).get('text', 'No text found')
 
 # Save the data to a text file
-with open('file.txt', 'w') as file:
+with open('file1.txt', 'w') as file:
     file.write(text)
 
-print("Processing completed. Results saved to file file.txt")
+print("Processing completed. Results saved to file file1.txt")
 
 
 # Read the input from file.txt
-with open('file.txt', 'r') as file:
+with open('file1.txt', 'r') as file:
     input_text = file.read()
 
 # Split the input text into lines
