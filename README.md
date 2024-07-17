@@ -1,4 +1,5 @@
 The programme aims to convert the entered image into text using the Google Clouds Platform (https://cloud.google.com/). The image is read from a saved .PNG file and saved to .txt.
+*Simple solution to move to the next save line based on ‘:’
 
 An example of the application is shown below:
 PNG file:
